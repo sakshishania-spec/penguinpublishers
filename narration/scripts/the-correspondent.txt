@@ -1,0 +1,8 @@
+The Correspondent — Virginia Evans
+Save each line as its own MP3 in:  assets/narration/the-correspondent/
+
+01.mp3   This is the story of The Correspondent, by Virginia Evans.
+02.mp3   Emotional and cozy literary fiction.
+03.mp3   Told entirely in letters: Sybil Van Antwerp, a 73-year-old retired lawyer and keen gardener, writes to family, authors, neighbours and strangers about friendship, grief and second chances.
+04.mp3   It's emotional and cozy: the kind of book that stays with you after the last page.
+05.mp3   How does it end? Open The Correspondent on Penguin, and find out.

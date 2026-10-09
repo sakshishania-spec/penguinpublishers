@@ -1,0 +1,9 @@
+The Vegetarian — Han Kang
+Save each line as its own MP3 in:  assets/narration/the-vegetarian/
+
+01.mp3   This is the story of The Vegetarian, by Han Kang.
+02.mp3   Dark and mind-bending fiction in translation.
+03.mp3   After recurring nightmares, Yeong-hye stops eating meat, and her quiet rebellion shocks her family and spirals into something stranger.
+04.mp3   A disturbing, beautiful novel from the Nobel laureate.
+05.mp3   It's dark and mind-bending: the kind of book that stays with you after the last page.
+06.mp3   How does it end? Open The Vegetarian on Penguin, and find out.

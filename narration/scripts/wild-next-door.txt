@@ -1,0 +1,8 @@
+Wild Next Door — Arefa Tehsin
+Save each line as its own MP3 in:  assets/narration/wild-next-door/
+
+01.mp3   This is the story of Wild Next Door, by Arefa Tehsin.
+02.mp3   Adventurous children’s nature.
+03.mp3   Grab a magnifying glass: a guide to the surprising creatures in your own home and garden, from hornets and termites to fireflies, skinks and a fish that seems to walk.
+04.mp3   It's adventurous: the kind of book that stays with you after the last page.
+05.mp3   How does it end? Open Wild Next Door on Penguin, and find out.

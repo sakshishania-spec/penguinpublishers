@@ -1,0 +1,11 @@
+Ikigai — Héctor García & Francesc Miralles
+Save each line as its own MP3 in:  assets/narration/ikigai/
+
+01.mp3   This is the story of Ikigai, by Héctor García & Francesc Miralles.
+02.mp3   The Japanese idea of a reason to get up in the morning.
+03.mp3   Ikigai is the Japanese word for a reason to live: the point where your needs, passions, skills and sense of purpose meet.
+04.mp3   The book explores how finding it is linked to a longer, happier life, and helps you work out what your own ikigai might be.
+05.mp3   At its heart, this is a story about purpose, wellbeing and longevity.
+06.mp3   It's calm, reflective and uplifting: the kind of book that stays with you after the last page.
+07.mp3   Pick it up if you are looking for more meaning day to day.
+08.mp3   How does it end? Open Ikigai on Penguin, and find out.

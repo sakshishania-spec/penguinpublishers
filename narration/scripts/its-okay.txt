@@ -1,0 +1,8 @@
+It's Okay . . . — Jaya Kishori
+Save each line as its own MP3 in:  assets/narration/its-okay/
+
+01.mp3   This is the story of It's Okay . . ., by Jaya Kishori.
+02.mp3   Cozy and inspiring spirituality · self-help.
+03.mp3   Spiritual speaker Jaya Kishori’s gentle reminder that everyone has problems, with advice for handling stress and living a more meaningful life.
+04.mp3   It's cozy and inspiring: the kind of book that stays with you after the last page.
+05.mp3   How does it end? Open It's Okay . . . on Penguin, and find out.

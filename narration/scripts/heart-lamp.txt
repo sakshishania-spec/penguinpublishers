@@ -1,0 +1,11 @@
+Heart Lamp — Banu Mushtaq
+Save each line as its own MP3 in:  assets/narration/heart-lamp/
+
+01.mp3   This is the story of Heart Lamp, by Banu Mushtaq.
+02.mp3   Stories of women’s everyday lives in southern India.
+03.mp3   Translated from the Kannada, these stories capture the everyday lives of women and girls in Muslim communities in southern India, drawing on Banu Mushtaq's years as a journalist and lawyer.
+04.mp3   They are witty, vivid and moving by turns, full of spirited children, bold grandmothers and mothers carrying more than anyone sees.
+05.mp3   At its heart, this is a story about women’s lives, family & community and faith & power.
+06.mp3   It's moving, witty and vivid: the kind of book that stays with you after the last page.
+07.mp3   Pick it up if you love short stories.
+08.mp3   How does it end? Open Heart Lamp on Penguin, and find out.

@@ -1,0 +1,8 @@
+The Fourth Girl — Arefa Tehsin
+Save each line as its own MP3 in:  assets/narration/the-fourth-girl/
+
+01.mp3   This is the story of The Fourth Girl, by Arefa Tehsin.
+02.mp3   Thrilling and dark mystery thriller.
+03.mp3   Twenty years after a mysterious disappearance, three survivors are reunited at a funeral in Colombo, just as a journalist starts asking what happened to the fourth girl.
+04.mp3   It's thrilling and dark: the kind of book that stays with you after the last page.
+05.mp3   How does it end? Open The Fourth Girl on Penguin, and find out.
