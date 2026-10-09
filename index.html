@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Penguin — Reading Matters (Redesign Concept)</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="Design concept for a Penguin Random House India homepage with AI book discovery. Not an official Penguin Random House website." />
+<link rel="icon" type="image/png" href="assets/v2/logo-penguin.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div id="loader"><div class="book"><div class="pg"></div><div class="pg"></div><div class="pg"></div></div><p>Opening the next chapter…</p></div>
+<div id="progress"></div>
+<div id="cursor"></div>
+
+<!-- Simple original penguin mark (not the official logo) -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="pen" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="16" fill="#EE6A1F"/>
+    <ellipse cx="32" cy="36" rx="15" ry="20" fill="#1B1712"/>
+    <ellipse cx="32" cy="40" rx="9" ry="14" fill="#fff"/>
+    <circle cx="28" cy="24" r="2" fill="#fff"/><circle cx="36" cy="24" r="2" fill="#fff"/>
+    <path d="M29 29 L35 29 L32 33 Z" fill="#FFB347"/>
+    <path d="M24 56 l6 -3 M40 56 l-6 -3" stroke="#FFB347" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="nh" id="hdr">
+  <a class="nh-logo" href="#top" aria-label="Penguin Random House India — home">
+    <img class="pg" src="assets/v2/logo-penguin.png" alt="Penguin" />
+    <span class="wm"><img src="assets/v2/logo-wordmark.png" alt="Penguin Random House India" /></span>
+  </a>
+  <nav class="nh-nav" id="fhNav" aria-label="Main">
+    <div class="nh-item"><button type="button" aria-haspopup="true" aria-expanded="false">Merchandise<img src="assets/v2/icon-chevron-down.svg" width="15" height="15" alt="" /></button><div class="nh-dd"><a href="#discover">Shop all merchandise</a><a href="#discover">Gifts for readers</a></div></div>
+    <div class="nh-item"><button type="button" aria-haspopup="true" aria-expanded="false">Authors<img src="assets/v2/icon-chevron-down.svg" width="15" height="15" alt="" /></button><div class="nh-dd"><a href="#discover">Browse authors</a><a href="#mission">Author events</a></div></div>
+    <div class="nh-item"><button type="button" aria-haspopup="true" aria-expanded="false">Blog<img src="assets/v2/icon-chevron-down.svg" width="15" height="15" alt="" /></button><div class="nh-dd"><a href="#discover">Latest posts</a><a href="#discover">Reading lists</a></div></div>
+    <div class="nh-item"><button type="button" aria-haspopup="true" aria-expanded="false">Our Company<img src="assets/v2/icon-chevron-down.svg" width="15" height="15" alt="" /></button><div class="nh-dd"><a href="#mission">About us</a><a href="#imprints">Our imprints</a></div></div>
+    <a href="#mission">Publish with Us</a>
+  </nav>
+  <div class="nh-actions">
+    <div class="nh-icons">
+      <button class="nh-btn" id="nhSearch" type="button" aria-label="Search with AI" title="Search with AI"><img src="assets/v2/icon-search.svg" width="24" height="24" alt="" /></button>
+      <button class="nh-btn nh-theme" id="themeBtn" type="button" aria-label="Switch to Black theme" aria-pressed="false" title="Switch to Black theme">
+        <img class="i-moon" src="assets/v2/icon-moon.svg" width="24" height="24" alt="" />
+        <svg class="i-sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+      </button>
+      <div class="sh-wrap">
+        <button class="nh-btn nh-shelf" id="shelfBtn" type="button" aria-label="My Shelf" title="My Shelf" aria-haspopup="dialog" aria-expanded="false" aria-controls="shelfPop">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><rect x="3" y="2.4" width="2.1" height="19.4" rx="1.05"/><rect x="18.9" y="2.4" width="2.1" height="19.4" rx="1.05"/>
+            <rect x="4" y="8.4" width="16" height="1.6"/><rect x="4" y="14.2" width="16" height="1.6"/><rect x="4" y="19.6" width="16" height="1.6"/>
+            <rect x="6.6" y="4" width="1.4" height="4.4"/><rect x="8.5" y="4" width="1.4" height="4.4"/><rect x="10.4" y="4" width="1.4" height="4.4"/><rect x="13.4" y="3.9" width="1.4" height="4.7" transform="rotate(-42 14.1 8.4)"/>
+            <rect x="10" y="9.6" width="1.4" height="4.8" transform="rotate(40 10.7 14.2)"/><rect x="12.6" y="9.9" width="1.4" height="4.3"/><rect x="14.5" y="9.9" width="1.4" height="4.3"/><rect x="16.4" y="9.9" width="1.4" height="4.3"/>
+            <rect x="9.7" y="15.6" width="1.4" height="4.1"/><rect x="11.6" y="15.6" width="1.4" height="4.1"/><rect x="13.5" y="15.6" width="1.4" height="4.1"/><rect x="15.4" y="15.6" width="1.4" height="4.1"/></svg>
+          <em class="sh-n" id="shelfN" hidden>0</em>
+        </button>
+        <div class="sh-pop" id="shelfPop" role="dialog" aria-label="My Shelf">
+          <div class="sh-head"><b>My Shelf</b><span id="shelfSub">Books you've saved</span><a class="sh-view" href="#myshelf" id="shelfView">View your shelf ↓</a></div>
+          <div class="sh-list" id="shelfList"></div>
+          <div class="sh-foot" id="shelfFoot"><button type="button" class="sh-choose" id="shelfChoose">✦ Help me choose</button><button type="button" class="sh-more" id="shelfMore">Find more</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="pm-wrap">
+      <button class="nh-avatar" id="nhAvatar" type="button" aria-label="Your reader profile" aria-haspopup="true" aria-expanded="false" aria-controls="pmMenu"><img src="assets/v2/avatar.png" width="58" height="58" alt="" /></button>
+      <div class="pm" id="pmMenu" role="menu" aria-label="Your reader profile">
+        <div class="pm-head"><img src="assets/v2/avatar.png" alt="" /><div><b>Hi, reader</b><span id="pmTaste">Your taste builds as you chat with Penguin.</span></div></div>
+        <button type="button" role="menuitem" data-pm="chat"><i>✦</i>Talk to Penguin<em>Your bookseller</em></button>
+        <button type="button" role="menuitem" data-pm="profile"><i>👤</i>My reader profile<em id="pmProf">Built from your chats</em></button>
+        <button type="button" role="menuitem" data-pm="shortlist"><i>♡</i>My shelf<em class="pm-n" id="pmShort">0</em></button>
+        <button type="button" role="menuitem" data-pm="picks"><i>📚</i>My picks<em class="pm-n" id="pmPicks">0</em></button>
+        <button type="button" role="menuitemcheckbox" aria-checked="false" data-pm="read"><i>🔊</i>Read answers aloud<span class="pm-sw" aria-hidden="true"></span></button>
+        <div class="pm-sep"></div>
+        <button type="button" role="menuitem" data-pm="clear" class="pm-danger"><i>🧹</i>Clear my profile</button>
+        <p class="pm-note">No sign-up needed. Your profile stays in this browser.</p>
+      </div>
+    </div>
+    <button class="nh-menu" id="fhMenu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="fhNav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ALL BOOKS page (index.html#books): the full catalogue, opened from "View more" on the mood shelf -->
+  <section class="block allbooks" id="allbooks" aria-labelledby="abTitle" hidden>
+    <div class="wrap">
+      <a class="ab-back" href="#discover">← Back to home</a>
+      <div class="sec-head">
+        <h2 id="abTitle">All <em class="serif">books.</em></h2>
+        <p id="abSub"></p>
+      </div>
+      <div class="ab-tools">
+        <div class="moods" id="abChips" role="group" aria-label="Filter by category"></div>
+        <label class="ab-search"><span class="sr-only">Search books</span><input id="abSearch" type="search" placeholder="Search titles or authors" autocomplete="off" /></label>
+      </div>
+      <div class="shelf" id="abGrid"></div>
+      <p class="ab-empty" id="abEmpty" hidden>No books match that search. Try another title or author.</p>
+    </div>
+  </section>
+  <!-- FIRST FOLD: Figma v2 (MacBook Pro 14" - 5 › Fold 1, node 4:71) -->
+  <section class="fhero" id="fhero">
+    <div class="fh-back">
+      <img class="fh-photo" src="assets/v2/bg-hero.png" alt="" />
+      <div class="fh-dim"></div>
+      <div class="fh-fan" id="fhFan">
+        <div class="fh-book" data-tag="Most Loved" style="left:114.37px;top:72.06px;width:203.687px;height:263.615px;--r:-12.76deg;--d:0.25s"><img src="assets/v2/cover-1.png" alt="Riley Dare: Slightly Witchy Sleuth" /></div>
+        <div class="fh-book" data-tag="Book of Month" style="left:220.48px;top:70.74px;width:209.296px;height:266.421px;--r:14.44deg;--d:0.32s"><img src="assets/v2/cover-2.png" alt="The Accidental Protector" /></div>
+        <div class="fh-book" data-tag="Highly Rated" style="left:341.19px;top:94.89px;width:183.381px;height:252.429px;--r:-7.08deg;--d:0.39s"><img src="assets/v2/cover-3.png" alt="God Save the Dork" /></div>
+        <div class="fh-book" data-tag="Reader Favorite" style="left:421.77px;top:116.76px;width:229.439px;height:275.174px;--r:20.98deg;--d:0.46s"><img src="assets/v2/cover-4.png" alt="What We Did to Survive" /></div>
+        <div class="fh-book" data-tag="Award Winner" style="left:576.08px;top:117.02px;width:166.515px;height:242.124px;--r:2.7deg;--d:0.53s"><img src="assets/v2/cover-5.png" alt="Nirmala &amp; Normala" /></div>
+        <div class="fh-book" data-tag="New Release" style="left:659.18px;top:72.14px;width:232.349px;height:276.229px;--r:-22.01deg;--d:0.60s"><img src="assets/v2/cover-6.png" alt="The Hidden Hindu" /></div>
+        <div class="fh-book" data-tag="Trending Now" style="left:715.51px;top:108.36px;width:245.494px;height:280.101px;--r:27.06deg;--d:0.67s"><img src="assets/v2/cover-7.png" alt="Mumbai Confidential" /></div>
+      </div>
+    </div>
+    <div class="fh-inner">
+      <h1><span class="ln"><span>The right book.</span></span><span class="ln"><span>At the right moment.</span></span></h1>
+      <div class="fh-search aisearch" id="aisearch">
+        <img class="fh-glow" src="assets/v2/search-glow-alpha.png" alt="" />
+        <form class="fh-bar" id="aiSearchForm" autocomplete="off">
+          <span class="fh-spark" aria-hidden="true">✦</span>
+          <label class="fh-field" id="fhField">
+            <img class="fh-caret" src="assets/v2/icon-caret.svg" width="2" height="21" alt="" />
+            <input id="aiSearch" aria-label="Ask Penguin AI for a book" placeholder="Try: a picture book about being brave" />
+          </label>
+          <button class="fh-mic" type="button" id="heroMic" aria-label="Speak your request" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+          <button class="fh-ask" type="submit"><img src="assets/v2/icon-sparkle.svg" width="24" height="24" alt="" />Ask Penguin</button>
+        </form>
+        <div class="aidrop" id="aiDrop" role="region" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY SHELF (second section): empty at first; books are added from the "Explore Books" discovery chat -->
+  <section class="block" id="myshelf" aria-labelledby="msTitle">
+    <div class="wrap">
+      <div class="ms-nook chatting reveal" id="msNook">
+        <div class="ms-left">
+          <div class="ms-head" id="msEmpty">
+            <h2 id="msTitle">Design your <em class="serif">shelf</em></h2>
+            <p id="msSub"></p>
+          </div>
+          <div class="ms-stage" id="msRow"></div>
+        </div>
+        <aside class="msc" id="msChat" aria-label="Ask Penguin to design your shelf">
+          <div class="msc-body" id="mscBody" aria-live="polite"></div>
+          <form class="msc-input" id="mscForm"><span aria-hidden="true">✦</span><input id="mscText" autocomplete="off" placeholder="Tell me what you're in the mood for…" aria-label="Tell Penguin what you're in the mood for" /><button type="submit" aria-label="Send">→</button></form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND FOLD: The Ones Everyone Loves (Figma "MacBook Pro 14" - 5") -->
+  <section class="ones" id="bestsellers">
+    <div class="ones-grid">
+      <div class="ones-left">
+        <div class="headline" id="headline">
+          <h2><span class="ln"><span>The Ones</span></span><span class="ln"><span>Everyone <em class="serif">Loves</em></span></span></h2>
+          <p>The Penguin bestsellers that have found a place on countless shelves and in readers’ hearts.</p>
+        </div>
+        <div class="ones-line" aria-hidden="true"></div>
+        <div class="ones-head">
+          <h3>Popular Now</h3>
+          <div class="ones-nav"><button type="button" id="onesPrev" aria-label="Scroll books left">‹</button><button type="button" id="onesNext" aria-label="Scroll books right">›</button></div>
+        </div>
+        <div class="ones-row" id="onesRow" role="listbox" aria-label="Popular books"></div>
+        <div class="ones-tip"><i></i> Pick a book to see Penguin's take</div>
+      </div>
+      <aside class="ones-right" aria-live="polite">
+        <span class="spot-k">✦ Penguin's take</span>
+        <div class="spot-stage" id="spotStage">
+          <div class="sb-float"><div class="sb" id="sb" role="button" tabindex="0" aria-label="Open this book">
+            <div class="front" id="sbFront"><div class="cf"><img id="sbImg" alt="" /></div></div><div class="back"></div><div class="spine"><span id="sbSpine"></span></div><div class="pages"></div>
+          </div></div>
+        </div>
+        <div class="spot-info" id="spotInfo"></div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="marquee"><div class="track" id="track"></div></div>
+
+  <!-- DISCOVER -->
+  <section class="block" id="discover">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Find a book that<br>fits your <em class="serif">mood.</em></h2>
+        <p>Pick a feeling. The shelf rearranges itself. Hover a cover to peek inside.</p>
+      </div>
+      <div class="moods reveal" id="moods"></div>
+      <div class="shelf" id="shelf"></div>
+    </div>
+  </section>
+
+  <!-- BOOK OF THE YEAR 2026 -->
+  <section class="block boty" id="book-of-the-year" style="padding-top:0" aria-labelledby="botyTitle">
+    <div class="wrap">
+      <div class="boty-lay">
+        <div class="boty-panel reveal">
+          <span class="boty-eyebrow">Penguin picks</span>
+          <h2 class="boty-type" id="botyTitle" aria-label="Book of the year 2026">
+            <span class="c1" aria-hidden="true">B</span><span class="pill" aria-hidden="true"></span><span class="c3" aria-hidden="true">OK<small>Of the<br><em>year</em></small></span>
+            <span class="c4" aria-hidden="true">2</span><span class="c6" aria-hidden="true">26</span>
+          </h2>
+          <p class="boty-desc" id="botyBlurb"></p>
+          <a class="boty-more" href="#books">View more <span aria-hidden="true">›</span></a>
+        </div>
+        <div class="boty-books-wrap reveal" id="botyCard">
+          <div class="boty-row" id="botyRow" tabindex="0" aria-label="Books of the year, ranked"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPRINTS -->
+  <section class="block" id="imprints" style="padding-top:56px">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Our <em class="serif">houses.</em></h2>
+        <p>Three worlds under one roof — each with its own voice, all driven by a love of reading.</p>
+      </div>
+      <div class="imprints">
+        <a class="imp reveal" href="#">
+          <div class="bg" style="--c1:rgba(238,106,31,.35);--c2:#B83A0B"><img src="assets/houses/publishing.jpg" alt="" loading="lazy" /></div>
+          <span class="arrow">↗</span>
+          <h3>Penguin Publishing Group</h3>
+          <p>Literary fiction, bold nonfiction and the classics that shaped us.</p>
+        </a>
+        <a class="imp reveal" href="#" style="transition-delay:.1s">
+          <div class="bg" style="--c1:rgba(47,111,222,.35);--c2:#173A8A"><img src="assets/houses/young-readers.jpg" alt="" loading="lazy" /></div>
+          <span class="arrow">↗</span>
+          <h3>Penguin Young Readers</h3>
+          <p>Picture books, middle grade and YA for every kind of curious kid.</p>
+        </a>
+        <a class="imp reveal" href="#" style="transition-delay:.2s">
+          <div class="bg" style="--c1:rgba(27,23,18,.35);--c2:#1B1712"><img src="assets/houses/classics.jpg" alt="" loading="lazy" /></div>
+          <span class="arrow">↗</span>
+          <h3>Penguin Classics</h3>
+          <p>Timeless stories, freshly introduced for a new generation.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="block" id="mission" style="padding-top:0">
+    <div class="wrap">
+      <div class="mission reveal">
+        <blockquote id="quote">We believe books have the power to <span class="hl">change lives</span> — to build empathy, spark curiosity and connect readers to <span class="hl">ideas bigger than themselves.</span></blockquote>
+        <div class="stats">
+          <div><b data-count="90" data-suffix="+">0</b><span>Years of publishing</span></div>
+          <div><b data-count="15000" data-suffix="+">0</b><span>New titles every year</span></div>
+          <div><b data-count="80" data-suffix="+">0</b><span>Nobel Prize laureates</span></div>
+          <div><b data-count="100" data-suffix="%">0</b><span>Committed to reading</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="news reveal">
+        <h2>Get a book recommendation in your inbox every Friday.</h2>
+        <div>
+          <form id="newsForm">
+            <input type="email" required placeholder="you@example.com" aria-label="Email" />
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+          <div class="ok" id="newsOk"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="brand" href="#top"><img src="assets/v2/logo-penguin.png" alt="" /><span>Penguin<small>Reading Matters</small></span></a>
+        <p style="color:var(--ink-2);margin-top:14px;max-width:300px">Changing the world one book at a time.</p></div>
+      <div><h5>Explore</h5><a href="#discover">Discover</a><a href="#imprints">Imprints</a><a href="#">Authors</a><a href="#">Events</a></div>
+      <div><h5>Company</h5><a href="#mission">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Contact</a></div>
+      <div><h5>Follow</h5><a href="#">Instagram</a><a href="#">X</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+    </div>
+    <div class="fine"><span>Design concept — not an official Penguin Random House India website. AI summaries and recommendations are demo content.</span><span>© 2026</span></div>
+  </div>
+</footer>
+
+<!-- Book popup: 3D flip book + AI summary -->
+<div class="bm" id="bm" role="dialog" aria-modal="true" aria-label="Book preview">
+  <div class="bm-backdrop" data-close></div>
+  <button class="bm-x" data-close aria-label="Close book">✕</button>
+  <div class="bm-stage" id="bmStage">
+    <div class="bm-fly" id="bmFly"><div class="bm-tilt" id="bmTilt"><div class="bm-book" id="bmBook" data-s="0"></div></div></div>
+  </div>
+  <div class="bm-ui">
+    <button class="bm-nav" id="bmPrev" aria-label="Previous page">←</button>
+    <div class="bm-tabs" id="bmTabs"></div>
+    <button class="bm-nav" id="bmNext" aria-label="Next page">→</button>
+  </div>
+</div>
+
+
+<div class="concept-badge" role="note"><b>Concept</b> · not an official Penguin Random House site</div>
+
+<!-- AI -->
+<button class="ai-fab" id="fab" data-open-ai><span class="av"><img src="assets/v2/logo-penguin.png" alt="" /></span><b>Ask Penguin</b></button>
+<aside class="ai-panel" id="panel" aria-label="AI reading assistant">
+  <div class="ai-top">
+    <div class="av"><img src="assets/v2/logo-penguin.png" alt="" /></div>
+    <div><b>Penguin</b><small><i></i> Your bookseller<span class="long"> · ask in your own words</span></small></div>
+    <button class="side-btn" id="sideBtn" type="button">♥ 0 · Profile</button>
+    <button class="x" id="closeAi" aria-label="Close">✕</button>
+  </div>
+  <div class="ai-wrap"><div class="ai-main">
+  <div class="ai-body" id="aiBody" aria-live="polite"></div>
+  <div class="suggest" id="suggest"></div>
+  <form class="ai-in" id="aiForm">
+    <input id="aiQ" placeholder="Ask like you would in a bookshop…" autocomplete="off" />
+    <button type="button" class="mic" id="chatMic" aria-label="Speak to Penguin" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+    <button aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+  <div class="ai-note">Demo · Penguin recommends only from the Penguin books on this page · voice uses your browser</div>
+  </div>
+  <aside class="ai-side" id="aiSide" aria-label="Your reader profile and shelf">
+    <section><h4>Your reader profile</h4><p class="sub">Built from your conversations. No sign-up.</p><div class="pchips" id="profChips"></div></section>
+    <section><h4>My Shelf <span id="slCount"></span></h4><div class="sl-list" id="slList"></div><button type="button" class="btn orange side-cta" id="slChoose">✦ Help me choose</button></section>
+    <section class="how"><h4>How Penguin helps you decide</h4><ol style="margin-top:10px"><li>Ask in your own words, or tap the mic</li><li>Get your five best matches from Penguin's catalogue</li><li>♡ the ones you like</li><li>Penguin compares them and you pick one</li><li>Buy from a retailer, or hear an audio sample</li></ol></section>
+    <button type="button" class="linkish" id="profClear">Clear my profile from this browser</button>
+  </aside>
+  </div>
+</aside>
+<div class="toast2" id="toast2" role="status" aria-live="polite"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
